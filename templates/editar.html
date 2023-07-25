@@ -1,0 +1,26 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+<div class="formulario-laboratorio2">
+    <h2> Actualizar los Datos del Laboratorio</h2> 
+    <form action="{% url 'actualizar-lab' laboratorio.id %}" method="POST"> 
+        {% csrf_token %} 
+        <div class="form-group">
+            <label>Nombre:</label>
+            <input type="text" value="{{laboratorio.nombre}}" name="nombre">                    
+        </div>
+        <div class="form-group">
+            <label>Ciudad:</label>
+            <input type="text" value="{{laboratorio.ciudad}}"  name="ciudad">
+        </div>
+        <div class="form-group">
+            <label>Pais:</label>
+            <input type="text" value="{{laboratorio.pais}}" name="pais">   
+        </div>  
+        <div class="bonotes">
+            <button class="btn-laboratorio" type="submit">Enviar</button> 
+            <a class="btn-laboratorio2" href="{% url 'mostrar-lab' %}">Cancelar</a>
+        </div>
+    </form>
+</div> 
+

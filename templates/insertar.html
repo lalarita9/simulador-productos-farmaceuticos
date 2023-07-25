@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+<div class="formulario-laboratorio">
+        <h2> Ingresar los Datos del Laboratorio</h2> 
+        <form method="POST"> 
+            {% csrf_token %}
+            <div class="form-group">
+                <label >Nombre:</label>
+                <input type="text" placeholder="Ingrese el nombre del laboratorio" name="nombre">
+            </div>
+            <div class="form-group">
+                <label >Ciudad:</label>
+                <input type="text" placeholder="Ingrese la ciudad del laboratorio"  name="ciudad">
+            </div>
+            <div class="form-group">
+                <label >Pais:</label>
+                <input type="text" placeholder="Ingrese el pais del laboratorio" name="pais">   
+            </div>  
+            <div class="bonotes">
+                <button class="btn-laboratorio" type="submit">Enviar</button>  
+            </div>            
+        </form>
+    </div> 
+    <br>
+    <br>
+    <br>
+    <div class="mensaje-laboratorio">
+        <div class="consulta-insertar">
+            <p><b>¿Quiere ver Información de los Laboratorios?</b></p>
+        </div> 
+        <br>
+        <div class="consulta-btn">
+            <a class="btn-redireccionar" href="{% url 'mostrar-lab' %}">Ir ►</a>
+        </div>
+    </div>
+
+{% endblock  %}

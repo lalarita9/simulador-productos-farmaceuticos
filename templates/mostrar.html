@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-danger" role="alert" id="mensaje">{{ message}}</div> 
+  {% endfor %}
+{% endif %}
+    <h2> Información de Laboratorios </h2> 
+    <table class= "table" style="text-align:center"> 
+        <thead> 
+            <tr> 
+                <th>Nombre</th> 
+                <th>Ciudad</th> 
+                <th>País</th> 
+                <th>Editar</th> 
+                <th>Eliminar</th> 
+            </tr> 
+        </thead> 
+        <tbody> 
+            {% for laboratorio in laboratorios %} 
+            <tr> 
+                <td>{{laboratorio.nombre}}</td> 
+                <td>{{laboratorio.ciudad}}</td> 
+                <td>{{laboratorio.pais}}</td> 
+                <td> <a class="items__link" onclick="abrir_modal_actualizar('{% url 'editar-lab' laboratorio.pk%}')">Actualizar</a></td> 
+                <td> <a class="items__link" onclick="abrir_modal_eliminar('{% url 'eliminar-lab' laboratorio.pk%}')">Eliminar</a> </td> 
+            </tr> 
+            {% endfor %} 
+        </tbody> 
+    </table> 
+    <br><br> 
+    <div class="mensaje-laboratorio">
+        <div class="consulta-insertar">
+            <p><b>¿Quiere ir a la página de Inicio?</b></p>
+        </div> 
+        <br>
+        <div class="consulta-btn">
+            <a class="btn-redireccionar" href="{% url 'insertar-lab' %}">◄ Ir</a>
+        </div>
+        <br>
+        <p>Usted ha visitado esta página <span class="visitas">{{ num_visitas }} </span>veces</p>
+        
+    </div>
+    <div id="actualizar"></div>
+    <div id="eliminar"></div>
+{% endblock  %}
+
+{% block javascripts%}
+<script type="text/javascript">
+    //Se crean funciones para abrir modal
+  function abrir_modal_actualizar(url){
+    $('#actualizar').load(url, function(){
+      $(this).show()
+    });
+  }
+  function abrir_modal_eliminar(url){
+    $('#eliminar').load(url, function(){
+      $(this).show();
+    });
+  }
+  setTimeout(function() {
+    var messages = document.querySelectorAll('.alert');
+    messages.forEach(function(message){
+      message.style.display = 'none';
+    });
+  }, 2000);
+  
+</script>
+{% endblock javascripts%}

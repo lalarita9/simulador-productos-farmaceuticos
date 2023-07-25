@@ -1,0 +1,448 @@
+/* */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic";
+    color: #4c384a;
+  }
+/* Estilo de body, que heredera la mayoria de las urls*/
+#body {
+    width: 100%;
+    background-color: #e9915f;
+    display: grid;
+    min-height: 100vh;
+    margin-right: 0;
+    grid-template-rows: auto 1fr auto;
+}
+/* Fin estilo de body*/
+
+/* Estilo de header que heredera todas las urls*/
+.header{
+  background-color: #202c44;
+  border-bottom: 1px solid #193446;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+  padding: 5px 5%;
+}
+.header .navbar__logo{
+  cursor: pointer;
+  margin-right: auto;
+}
+.header .navbar__logo img{
+  transition: all 0.3;
+}
+.header .navbar__logo img:hover{
+  transform: scale(1.2);
+}
+.header .navbar__navegacion{
+  list-style: none;
+}
+.header .navbar__navegacion li{
+  display: inline-block;
+  padding: 0 20px;
+}
+.header .navbar__navegacion li:hover{
+  transform: scale(1.1);
+}
+.header .navbar__navegacion a{
+  font-size: 20px;
+  color: #efc173;
+  text-decoration: none;
+}
+.header .navbar__navegacion li a:hover {
+    color: #f26968;
+}
+/* Fin del estilo de header*/
+
+/* Estilo del cuerpo*/
+.main {
+    padding: 10px;
+    width: 100%;
+    margin: 10px;
+    height: auto;
+    align-items: center;
+}
+h2{
+    padding-bottom: 10px;
+    text-align: center;
+}
+/* Estilo de la url mostrar*/
+
+.table {
+  position: relative;
+  top: 30%;
+  left: 50%;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+}
+.table th{ 
+    background-color: #ff7e5f;
+    color: #fff;
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    font-size: 18px;
+} 
+.table td{ 
+    background-color: #fbb47b;
+    color: #3f3931;
+    font-family: 'Century Gothic';
+} 
+th, td {
+    padding: 10px;
+    border-collapse: collapse;
+}
+/* Estilo de url insertar*/
+.formulario-laboratorio{
+  position: relative;
+  top: 40%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(251, 180, 123, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+.formulario-laboratorio h2{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #4c384a;
+    text-align: center; 
+}
+.formulario-laboratorio .form-group input {
+  width: 100%;
+  padding: 5px 5px;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #193446;
+  border-radius: 10px;
+  outline: none;
+  background: transparent;
+}
+.formulario-laboratorio label {
+  color: #4c384a; 
+  font-weight: bold;
+}
+.btn-laboratorio {
+  width: 100px;
+  margin: 0px 10px;
+  background-color: #f26968;
+  text-align: center;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Century Gothic";
+  color: #fff;
+}
+.bonotes button:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+  }
+.btn-laboratorio2{
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  width: 100px;
+  margin: 0 40px;
+  background-color: #bcbcbc;
+  text-align: center;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Century Gothic";
+  color: #4c384a;
+  text-decoration: none;
+  font-size: 12px;
+}
+.bonotes a:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+  }
+/* Estilo de bontón url insertar y mostrar*/
+.btn-redireccionar{
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+.consulta-btn{
+  margin-left: 100px;
+}
+.consulta-btn a{
+  align-self: center;
+  background-color: #f26968;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Century Gothic';
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.consulta-btn a:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+.consulta-btn a:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+.items__link {
+    margin: 0 10px;
+    background-color: #f26968;
+    text-align: center;
+    padding: 5px;
+    border: none;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    transition: 500ms;
+  }
+  .items__link:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+    background-color: #950001;
+    }
+  /* Estilo de url editar*/
+.formulario-laboratorio2{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  color: #efc173;
+  background-color: #193446;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+ 
+}
+.formulario-laboratorio2 .form-group input {
+  width: 100%;
+  padding: 5px 15px;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-radius: 10px;
+  outline: none;
+  background: transparent;
+}
+.formulario-laboratorio2 label {
+  color: #efc173; 
+  font-weight: bold;
+}
+.formulario-laboratorio2 h2{
+  color: #efc173;
+}
+/* Estilo de footer que heredera todas de las urls*/
+.footer {
+  width: 100%;
+  border-top: 1px solid #193446;
+  margin-bottom: 0;
+  padding: 0;
+  background-color: #202c44;
+  color: #efc173;
+  }
+.footer .footer__varios{
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 70px;
+  padding-left: 5px;
+  padding-right: 5px;
+  }
+.footer .footer__varios .footer__texto{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #efc173;
+  }
+.texto__p1, .texto__p3{
+  font-weight:bold;
+  color: #efc173;
+  }
+.texto__p2{
+  font-style: oblique;
+  font-size: 14px;
+  font-weight:normal;
+  color: #efc173;
+  }
+.footer .footer__varios .footer__logo{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+.footer .footer__varios .footer__legal{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+/* Fin estilo footer*/
+.modal-eliminar{
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  color:antiquewhite;
+  font-family: "Century Gothic";
+  background-color: #193446;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  position: fixed;
+  top: 30%; 
+  left: 32%;
+  border-radius: 10px;
+  }
+  .modal-eliminar .texto-consulta p{
+    color: #fff;
+  }
+/*Estilo de botones url eliminar, código referencia button Warning del autor Chance Squires*/
+.btns-delete{
+  width: 400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  }
+.btn-re{
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  }
+.btn-retornar a{
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Century Gothic";
+  color:antiquewhite;
+  background: #019000;
+  box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+  border:none;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 500ms;
+  text-decoration: none;
+  }
+.btn-retornar a:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+  }
+.btn-eliminar{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+	-webkit-tap-highlight-color: transparent;
+  }
+.btn-confirmar button{
+  width: 100px;
+	height: 30px;
+	cursor: pointer;
+	font-size: 14px;
+	font-family: "Century Gothic";
+  color:antiquewhite;
+	background: #950001;
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+  border:none;
+  border-radius: 10px;
+	transition: 500ms;
+}
+.btn-confirmar button::after{
+  content: '';
+	position: absolute;
+	transform: translateX(-55px) translateY(-40px);
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: transparent;
+	box-shadow: 0px 0px 50px transparent;
+	transition: 500ms;
+}
+.btn-confirmar button:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+}
+.btn-confirmar button:hover::after {
+	background: white;
+	box-shadow: 0px 0px 20px #950001, 0px 0px 30px #950001, inset 0px 0px 10px #950001;
+	animation: spin 1s infinite linear;
+}
+
+@keyframes spin{
+	25%{transform: translateX(-25px) translateY(-35px);
+			width: 15px;
+			height: 15px;}
+	50% {transform: translateX(-55px) translateY(-30px);
+			width: 5px;
+			height: 5px;}
+	75% {transform: translateX(-85px) translateY(-35px);
+			width: 15px;
+			height: 15px;}
+}
+.btn-confirmar button:focus {
+	outline: none;
+}
+/*Fin estilo bonotes url eliminar*/
+.visitas {
+  font-weight: bold;
+  font-style: inherit;
+  color: #202c44;
+}
+#mensaje{
+  background-color: #dff0d8;
+  height: 30px;
+  padding: 5px;
+  width: 400px;
+  border-radius: 10px;
+  }
+.python__shell img{
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;  
+}
+  
+  
+ 
+  
+ 
+  
+

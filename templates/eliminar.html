@@ -1,0 +1,21 @@
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    
+    <div class="modal-eliminar">
+        <form action="{% url 'eliminar-lab' laboratorio.id %}" method="POST"> 
+            {% csrf_token %} 
+            
+            <div class="texto-consulta">
+                <p>¿Está seguro que desea eliminar el "{{ laboratorio.nombre}}"?</p>
+            </div> 
+            <br><br>
+            <div class="btns-delete">
+                <div class="btn-retornar">
+                    <a class="btn-re" href="{% url 'mostrar-lab' %}">Retornar</a>
+                </div>
+                <div class="btn-confirmar">
+                    <button class="btn-eliminar" type=submit>Confirmar</button>
+                </div>
+            </div>
+        </form> 
+    </div>
